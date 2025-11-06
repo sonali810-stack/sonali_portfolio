@@ -34,7 +34,7 @@ const About = () => {
             </p>
             <p className="about-description">
               Currently, I am pursuing a B.Tech in Computer Science and
-              Engineering at Bennett University (CGPA 7.8/10, till 5th semester)
+              Engineering at Bennett University (CGPA 7.2/10, till 5th semester)
               while collaborating with teams to ship products that balance
               thoughtful design and robust engineering.
             </p>

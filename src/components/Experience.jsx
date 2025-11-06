@@ -5,7 +5,7 @@ import './Experience.css';
 const Experience = () => {
   const experiences = [
     {
-      company: "Software Intern - Aakar Technologies Pvt. Ltd.",
+      company: "Software Intern - Trinix Pvt. Ltd.",
       period: "Sep 2025 - Present",
       description: "Developed Trinix's official company website with modern UI/UX using React.js. Built responsive web applications and implemented efficient frontend architecture.",
       skills: ["React.js", "UI/UX Design", "Responsive Design", "Frontend Architecture"]
