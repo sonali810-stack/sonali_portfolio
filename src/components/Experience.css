@@ -1,0 +1,154 @@
+/* components/Experience.css */
+.experience {
+  min-height: 100vh;
+  padding: 5rem 0;
+  background: linear-gradient(135deg, #0f0f1e 0%, #1a1a2e 100%);
+  position: relative;
+}
+
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 30px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, #00f2fe, #4facfe);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
+  padding-left: 80px;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: 16px;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #00f2fe;
+  box-shadow: 0 0 20px rgba(0, 242, 254, 0.6);
+  z-index: 2;
+}
+
+.marker-glow {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #00f2fe;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.3); opacity: 0.5; }
+}
+
+.experience-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateX(10px);
+  box-shadow: 0 12px 40px rgba(0, 242, 254, 0.2);
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.experience-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+}
+
+.experience-period {
+  font-size: 0.95rem;
+  color: #00f2fe;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.experience-description {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 1.5rem;
+}
+
+.experience-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.skill-tag {
+  padding: 0.5rem 1rem;
+  background: rgba(0, 242, 254, 0.1);
+  border: 1px solid rgba(0, 242, 254, 0.3);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: #00f2fe;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 15px;
+  }
+  
+  .timeline-item {
+    padding-left: 50px;
+  }
+  
+  .timeline-marker {
+    left: 0;
+  }
+}
+
+body[data-theme='light'] .experience {
+  background: linear-gradient(135deg, #edf6ff 0%, #f7fbff 100%);
+}
+
+body[data-theme='light'] .timeline::before {
+  background: linear-gradient(180deg, #38bdf8, #60a5fa);
+}
+
+body[data-theme='light'] .timeline-marker,
+body[data-theme='light'] .marker-glow {
+  background: #38bdf8;
+}
+
+body[data-theme='light'] .experience-title {
+  color: #0f172a;
+}
+
+body[data-theme='light'] .experience-period {
+  color: #2563eb;
+}
+
+body[data-theme='light'] .experience-description {
+  color: rgba(15, 23, 42, 0.72);
+}
+
+body[data-theme='light'] .skill-tag {
+  background: rgba(37, 99, 235, 0.12);
+  border: 1px solid rgba(37, 99, 235, 0.25);
+  color: #1d4ed8;
+}
